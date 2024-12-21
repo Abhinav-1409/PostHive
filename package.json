@@ -1,0 +1,19 @@
+{
+  "name": "aks",
+  "version": "1.0.0",
+  "description": "Social Media App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhinav-1409/AKS.git"
+  },
+  "author": "Akash & Abhinav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhinav-1409/AKS/issues"
+  },
+  "homepage": "https://github.com/Abhinav-1409/AKS#readme"
+}
