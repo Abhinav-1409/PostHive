@@ -1,5 +1,5 @@
 {
-  "name": "aks",
+  "name": "posthive",
   "version": "1.0.0",
   "description": "Social Media App",
   "main": "index.js",
@@ -8,12 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Abhinav-1409/AKS.git"
+    "url": "git+https://github.com/Abhinav-1409/PostHive.git"
   },
   "author": "Akash & Abhinav",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Abhinav-1409/AKS/issues"
+    "url": "https://github.com/Abhinav-1409/PostHive/issues"
   },
-  "homepage": "https://github.com/Abhinav-1409/AKS#readme"
+  "homepage": "https://github.com/Abhinav-1409/PostHive#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.2",
+    "multer": "^1.4.5-lts.1"
+  }
 }
