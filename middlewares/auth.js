@@ -4,7 +4,7 @@ const Users = require("../models/user");
 
 async function restrictToLoggedInUsersOnly(req, res, next) {
   const token = req.cookies?.uid;
-  if (!token) {
+  if (!token || token == undefined || token == null) {
     res.redirect('login/?error="Login to Continue."');
   }
   const user = jwt.verify(token, secretKey);
