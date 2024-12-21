@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const userRoutes = require("./routes/user");
+const port = process.env.PORT || 10001;
 
 app.get("/", (req, res) => {
   res.render("homepage", {
@@ -56,6 +57,6 @@ app.get("/", (req, res) => {
 
 app.use('/user',userRoutes);
 
-app.listen(8000, () => {
-  console.log("Server Started at PORT 8000");
+app.listen(port, () => {
+  console.log(`Server Started at PORT ${port}`);
 });
