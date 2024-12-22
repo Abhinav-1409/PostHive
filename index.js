@@ -8,10 +8,11 @@ app.use(express.static("./public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
+const restrictToLoggedInUsersOnly = require("./middlewares/auth");
 const userRoutes = require("./routes/user");
 const port = process.env.PORT || 10001;
 
-app.get("/", (req, res) => {
+app.get("/", restrictToLoggedInUsersOnly,(req, res) => {
   res.render("homepage", {
     posts: [
       {
