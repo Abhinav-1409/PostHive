@@ -5,7 +5,7 @@ const Users = require("../models/user");
 async function restrictToLoggedInUsersOnly(req, res, next) {
   const token = req.cookies?.uid;
   if (!token || token == undefined || token == null) {
-    res.redirect('login/?error="Login to Continue."');
+    res.redirect('/user/login/?error="Login to Continue."');
   }
   const user = jwt.verify(token, secretKey);
   const validateUser = Users.findById(user.id);
@@ -18,7 +18,7 @@ async function restrictToLoggedInUsersOnly(req, res, next) {
     };
     next();
   } else {
-    res.redirect('login/?error="Login to Continue."');
+    res.redirect('/user/login/?error="Login to Continue."');
   }
 }
 
